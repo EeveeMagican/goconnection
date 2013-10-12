@@ -1,17 +1,2 @@
-[8:00:28 PM] Shammah: <html><head><title>The Go Connection</title><script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script><script src="js/main.js"></script><head><body><div id="helloDiv">Hello!</div>
+<html><head><title>The Go Connection</title><script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script><script src="js/main.js"></script><head><body><div id="helloDiv">Hello!</div>
 <canvas id="myCanvas" height="300" width="600"></canvas></body></html>
-[8:00:47 PM] Shammah: under js/
-[8:00:51 PM] Shammah: create a file called main.js
-[8:00:58 PM] Shammah: and put in it:
-
- // Create a YUI sandbox on your page.
-YUI().use('node', 'event', function {
-    // The Node and Event modules are loaded and ready to use.
-    // Your code goes here!
-    
-    Y.one("#helloDiv").setHTML('Goodbye!');
-    
-    var b_canvas = Y.one("#myCanvas").getDOMNode();
-    var b_context = b_canvas.getContext("2d");
-    b_context.fillRect(50, 25, 150, 100);
-});
